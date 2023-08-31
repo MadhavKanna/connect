@@ -1,0 +1,16 @@
+{
+  "name": "connect",
+  "version": "1.0.0",
+  "description": "The server and client side application for connect - the new age networking trick",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/index.js"
+  },
+  "author": "Madhav Kanna Thenappan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.4.3"
+  }
+}
