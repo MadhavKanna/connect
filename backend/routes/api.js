@@ -15,4 +15,8 @@ apiRouter.get('/api/:userId', [], async (req, res) => {
     }
 });
 
+apiRouter.get('/api', [], (res, req) => {
+    return res.send("API is running");
+})
+
 module.exports = { apiRouter };
