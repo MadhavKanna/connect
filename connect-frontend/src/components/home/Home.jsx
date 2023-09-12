@@ -3,7 +3,10 @@ import React from 'react';
 function Home() {
     return (
         <div className='container'>
-            <h1>Home</h1>
+            <header className="App-header">
+                <h1>Home</h1>
+                Welcome to Connect
+            </header>
         </div>
     )
 }

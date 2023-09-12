@@ -9,10 +9,6 @@ function App() {
         <Route path="/connect/:userId" element={<InfoPage />} />
         <Route path="/" element={<Home />} />
       </Routes>
-      <header className="App-header">
-        Welcome to Connect
-      </header>
-
     </div>
   );
 }

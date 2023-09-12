@@ -2,31 +2,21 @@ import React, { useState, useEffect } from 'react';
 import Links from './Links';
 import axios from 'axios';
 import NotFound from '../general/NotFound';
+import { useParams } from 'react-router-dom';
 
-async function InfoPage() {
-    return <div>InfoPage</div>
-    // const userId = 'abcdefgh';
-    // const [userInfo, setUserInfo] = useState({});
-    // const fetchUserData = async () => {
-    //     const userData = await axios.get('/api/' + userId); // this leads to the get route ""
-    //     console.log(userData);
-    //     setUserInfo = userData;
-    // }
-    // useEffect(async () => {
-    //     fetchUserData();
-    // }, []);
+function InfoPage() {
+    const { userId } = useParams();
+    const [userInfo, setUserInfo] = useState({});
+    useEffect(async () => {
+        const userData = await axios.get('api/' + userId); // this leads to the get route ""
+        console.log(userData);
+        setUserInfo = userData;
+    }, []);
+    console.log(userInfo);
+    return <div className="container">
+        This the userInfo page
+    </div>
 
-    // if (userInfo) {
-    //     return (
-    //         <div className="jumbotron">
-    //             {/* <img src="" className='' /> */}
-    //             <h1 className='display-name'>${userInfo.name}</h1>
-    //             <Links details={userInfo} />
-    //         </div>
-    //     )
-    // } else {
-    //     return <NotFound />
-    // }
 }
 
 export default InfoPage;
